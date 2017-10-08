@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Net-Pong | Code &amp; Comments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <link rel="alternate" href="/atom.xml" title="Code &amp; Comments" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="trees"></div>
+    <div id="wrap">
+      <header id="header">
+    <div id="header-title">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Code &amp; Comments</a>
+      </h1>
+      
+        <h3 id="subtitle-wrap">
+          <a href="/" id="subtitle">A Collection of Projects by Sam Carlin</a>
+        </h3>
+      
+    </div>
+    <div class="article-tag-list">
+  
+    <div class="article-tag-list-item">
+      <a class="article-tag-list-link" href=/tags/Web/ >Web</a>
+      <span class="article-tag-list-count">3</span>
+    </div>
+  
+    <div class="article-tag-list-item">
+      <a class="article-tag-list-link" href=/tags/Game/ >Game</a>
+      <span class="article-tag-list-count">3</span>
+    </div>
+  
+    <div class="article-tag-list-item">
+      <a class="article-tag-list-link" href=/tags/Java/ >Java</a>
+      <span class="article-tag-list-count">1</span>
+    </div>
+  
+    <div class="article-tag-list-item">
+      <a class="article-tag-list-link" href=/tags/OpenGL/ >OpenGL</a>
+      <span class="article-tag-list-count">1</span>
+    </div>
+  
+</div>
+
+</header>
+
+      <div class="outer">
+        <section id="post-main">
+  <article id="post-netpong" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Net-Pong
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/netpong-play.png" alt="Game In Action"></p>
+<p><a href="https://github.com/samcarlinone/net-pong" target="_blank" rel="external">Code here (the JAR only works on some machines for unknown reasons)</a></p>
+<hr>
+<h2 id="Postmortem"><a href="#Postmortem" class="headerlink" title="Postmortem"></a>Postmortem</h2><p>This is another not so original concept, but it does have a few original technical features.</p>
+<p>Perhaps the most interesting, at least in my opinion, is the automatic matchmaking. The game uses UDP multicast to find other people over LAN, and then initiate a connection. When this works it is pretty nifty, especially because no server is required. However it is glitchy at best, and you have to be on the same LAN so it’s obvious why it isn’t used more.</p>
+<p>Another fun part of this project was the text. Since I was doing everything in OpenGL and I felt like a GUI library would be overkill, I ended up whipping up my own simple text shader with a bitmap font file. In this case, since I didn’t have to worry about any fancy formatting or wrapping, this solution worked great. Everything else is just triangles, including the ball.  </p>
+<p>This project is pretty small, but I really just wanted to see if I could get LAN discovery working.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a href="samcarlinone.github.io/netpong/" class="article-share-link">permalink</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Game/">Game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenGL/">OpenGL</a></li></ul>
+
+
+    </footer>
+  </div>
+</article>
+
+</section>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sam Carlin<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </div>
+</body>
+</html>
